@@ -5,9 +5,9 @@ const Navbar = () => {
     <div className="container mt-2">
       <nav class="navbar navbar-expand-lg navbar-light bg-primary text-white">
         <div class="container-fluid">
-          <Link class="navbar-brand text-white" to="/">
+          {/* <Link class="navbar-brand text-white" to="/">
             প্রথম পাতা
-          </Link>
+          </Link> */}
           <button
             class="navbar-toggler"
             type="button"
@@ -21,6 +21,11 @@ const Navbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
+              <li class="nav-item">
+                <Link class="nav-link text-white" to="/" aria-current="page">
+                  প্রথম পাতা
+                </Link>
+              </li>
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
@@ -44,6 +49,21 @@ const Navbar = () => {
                   <li>
                     <a class="dropdown-item" href="#">
                       প্রতিষ্ঠানের ভিশন ও মিশন
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      কম্পিউটার ল্যাব
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      সাংস্কৃতিক কার্যক্রম
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      লাইব্রেরী
                     </a>
                   </li>
                 </ul>
@@ -98,6 +118,16 @@ const Navbar = () => {
                   <li>
                     <a class="dropdown-item" href="#">
                       কৃতি শিক্ষার্থী
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      লেকচার
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      প্রশ্নাবলী
                     </a>
                   </li>
                 </ul>
@@ -193,38 +223,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link text-white dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  সুবিধাসমুহ
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      কম্পিউটার ল্যাব
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      সাংস্কৃতিক কার্যক্রম
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      লাইব্রেরী
-                    </a>
-                  </li>
-                </ul>
-              </li>
+
               <li class="nav-item dropdown">
                 <a
                   class="nav-link text-white dropdown-toggle"
@@ -288,33 +287,6 @@ const Navbar = () => {
                 <a class="nav-link text-white" href="#" aria-current="page">
                   যোগাযোগ
                 </a>
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link text-white dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  ই লার্নিং
-                </a>
-                <ul
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      লেকচার
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      প্রশ্নাবলী
-                    </a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>

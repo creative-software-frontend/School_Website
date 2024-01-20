@@ -7,13 +7,14 @@
   /* Define root variables */
   --primary-color: #004d14;
   --secondary-color: #f6f7f2;
+  --optional-color: #fcce54;
 }
 
 #root {
   background: url("/images/paisley.png") repeat scroll center top
     rgba(0, 0, 0, 0);
 
-  height: 100vh;
+  height: auto;
 }
 
 p {
@@ -29,11 +30,49 @@ a {
   background-color: var(--primary-color) !important;
   color: var(--secondary-color) !important;
 }
+.text-primary {
+  color: var(--primary-color) !important;
+}
 
 /* custom css */
 
 .homepage-main-container .col-lg-3 {
-  width: 30%;
+  width: 28%;
 }
 
+.carousel-item img {
+  height: 380px;
+  object-fit: cover;
+}
+
+.teacher img {
+  height: 150px;
+  object-fit: cover;
+  width: 130px;
+}
+.teacher-list .col-lg-2 {
+  padding-left: 3px !important;
+  padding-right: 3px !important;
+}
+.teacher .card-body {
+  text-align: center;
+}
+.teacher .card-body h5 {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+.info-heading {
+  border-left: 5px solid var(--optional-color);
+}
+.info-icon-wrapper {
+  padding: 10px;
+}
+.info-icon-wrapper i {
+  font-size: 60px;
+  color: var(--primary-color);
+}
+.info-list-wrapper {
+  list-style: none;
+  padding-left: 0px;
+}
 /* responsive css */
