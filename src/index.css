@@ -1,0 +1,39 @@
+/* bootstrap css v-5 */
+@import "/src/assets/css/bootstrap.css";
+
+/* default css */
+
+:root {
+  /* Define root variables */
+  --primary-color: #004d14;
+  --secondary-color: #f6f7f2;
+}
+
+#root {
+  background: url("/images/paisley.png") repeat scroll center top
+    rgba(0, 0, 0, 0);
+
+  height: 100vh;
+}
+
+p {
+  margin-bottom: 0px !important;
+}
+a {
+  text-decoration: none !important;
+}
+.cusror-pointer {
+  cursor: pointer;
+}
+.bg-primary {
+  background-color: var(--primary-color) !important;
+  color: var(--secondary-color) !important;
+}
+
+/* custom css */
+
+.homepage-main-container .col-lg-3 {
+  width: 30%;
+}
+
+/* responsive css */
