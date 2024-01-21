@@ -90,7 +90,7 @@ td {
 
 .marquee-container {
   overflow: hidden;
-  height: 50px; /* Adjust the height as needed */
+  height: auto; /* Adjust the height as needed */
 }
 
 .marquee-content {
@@ -135,7 +135,18 @@ td {
   margin-left: 0px !important;
 }
 .footer-col-heading {
-  font-size: 30px !important;
+  font-size: 24px !important;
+  position: relative;
+  margin-bottom: 15px;
+}
+.footer-col-heading::after {
+  width: 30px;
+  height: 4px;
+  content: "";
+  background-color: var(--optional-color);
+  position: absolute;
+  left: 0px;
+  top: 30px;
 }
 .footer-links a {
   color: rgb(197, 192, 192);
@@ -148,5 +159,14 @@ td {
 }
 .page-card {
   border-left: 3px solid var(--primary-color);
+}
+.footer-contact i {
+  margin-right: 5px;
+  width: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+.bg-light-grey {
+  background: lightgrey;
 }
 /* responsive css */
