@@ -57,7 +57,7 @@ const TopHeader = () => {
             <i className="fa fa-language me-1"></i> English |
           </a>
           <p className="d-flex align-items-center">
-            <i className="fa fa-sign-in me-1"></i>Login{" "}
+            <i className="fa fa-sign-in me-1"></i>Login{" "} |
             <i className="fa fa-angle-right me-1 ms-1"></i>
             <a className="text-white me-1" href="#">
               Guardian

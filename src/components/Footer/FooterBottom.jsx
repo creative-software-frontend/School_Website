@@ -1,7 +1,7 @@
 const FooterBottom = () => {
   return (
     <div className="card px-3 py-2 flex-row align-items-center justify-content-between">
-      <p>All Rights Reserved 2024 &copy; Dhaka School & College</p>
+      <p> &copy; 2024 Dhaka School & College. All Rights Reserved. </p>
       <p>
         Powered By:{" "}
         <a href="#" target="_blank">
