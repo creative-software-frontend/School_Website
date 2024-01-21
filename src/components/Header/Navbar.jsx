@@ -26,6 +26,7 @@ const Navbar = () => {
                   প্রথম পাতা
                 </Link>
               </li>
+              {/* institute information */}
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
@@ -42,32 +43,33 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink2"
                 >
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/institute-history">
                       প্রতিষ্ঠানের ইতিহাস
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/institute-vission">
                       প্রতিষ্ঠানের ভিশন ও মিশন
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/computer-lab">
                       কম্পিউটার ল্যাব
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/cultural-history">
                       সাংস্কৃতিক কার্যক্রম
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/library">
                       লাইব্রেরী
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
+              {/* teacher information */}
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
@@ -84,17 +86,18 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink2"
                 >
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/teachers">
                       সকল শিক্ষক
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/directors">
                       কর্মকর্তা বৃন্দ
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
+              {/* student information */}
               <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle text-white"
@@ -111,9 +114,9 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink2"
                 >
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/students">
                       সকল শিক্ষার্থী
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">

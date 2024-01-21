@@ -1,7 +1,15 @@
-import React from "react";
+import ImportantFigures from "./Sidebar/ImportantFigures";
+import ImportantLinks from "./Sidebar/ImportantLinks";
+import NoticeBoard from "./Sidebar/NoticeBoard";
 
 const Sidebar = () => {
-  return <div>Sidebar</div>;
+  return (
+    <>
+      <ImportantFigures />
+      <NoticeBoard />
+      <ImportantLinks />
+    </>
+  );
 };
 
 export default Sidebar;

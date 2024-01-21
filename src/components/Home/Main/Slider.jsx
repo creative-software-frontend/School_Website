@@ -53,32 +53,16 @@ const Slider = () => {
           <img src="/images/slider/2.jpg" className="d-block w-100" alt="..." />
         </div>
         <div className="carousel-item">
-          <img
-            src="/images/slider/16103530088.png"
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src="/images/slider/3.jpg" className="d-block w-100" alt="..." />
         </div>
         <div className="carousel-item">
-          <img
-            src="/images/slider/16103521133.png"
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src="/images/slider/4.jpg" className="d-block w-100" alt="..." />
         </div>
         <div className="carousel-item">
-          <img
-            src="/images/slider/16103524534.png"
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src="/images/slider/5.jpg" className="d-block w-100" alt="..." />
         </div>
         <div className="carousel-item">
-          <img
-            src="/images/slider/16103528717.png"
-            className="d-block w-100"
-            alt="..."
-          />
+          <img src="/images/slider/6.jpg" className="d-block w-100" alt="..." />
         </div>
       </div>
       <button

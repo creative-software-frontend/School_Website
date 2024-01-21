@@ -11,11 +11,11 @@ const HomePage = () => {
       <div className="container my-3">
         <NewsUpdate />
       </div>
-      <div className="row gap-4">
+      <div className="row gap-3">
         <div className="col-lg-8 card ms-4">
           <HomeMain />
         </div>
-        <div className="col-lg-3 card">
+        <div className="col-lg-3 card sidebar-col-lg-3">
           <Sidebar />
         </div>
       </div>
