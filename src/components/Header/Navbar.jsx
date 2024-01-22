@@ -119,19 +119,19 @@ const Navbar = () => {
                     </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/brilliant-students">
                       কৃতি শিক্ষার্থী
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/lectures">
                       লেকচার
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/questions">
                       প্রশ্নাবলী
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>

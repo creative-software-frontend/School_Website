@@ -1,11 +1,31 @@
-import PageCard from "@/components/Common/PageCard";
-
 const StudentsPage = () => {
   return (
     <div className="container">
-      <PageCard title="সকল শিক্ষার্থী" />
+      <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between">
+        <h4 className="fw-bold">সকল শিক্ষার্থী</h4>
+        <div className="d-flex gap-2">
+          <select className="form-select" aria-label="Default select example">
+            <option disabled selected>
+              Select Class
+            </option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="3">Four</option>
+            <option value="3">Five</option>
+          </select>
+          <select className="form-select" aria-label="Default select example">
+            <option selected>Select Session</option>
+            <option value="1">2023</option>
+            <option value="2">2022</option>
+            <option value="3">2021</option>
+            <option value="3">2020</option>
+            <option value="3">2019</option>
+          </select>
+        </div>
+      </div>
       <div className="card">
-        <table class="table table-bordered px-3 py-3 mb-0 text-center">
+        <table className="table table-bordered px-3 py-3 mb-0 text-center">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -58,7 +78,7 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/students/1.jpg"
+                  src="/images/students/2.jpg"
                   alt=""
                 />
               </td>
@@ -83,7 +103,7 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/students/1.jpg"
+                  src="/images/students/3.jpg"
                   alt=""
                 />
               </td>
@@ -108,7 +128,7 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/students/1.jpg"
+                  src="/images/students/4.jpg"
                   alt=""
                 />
               </td>
@@ -133,7 +153,7 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/students/1.jpg"
+                  src="/images/students/5.jpg"
                   alt=""
                 />
               </td>
@@ -158,7 +178,7 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/students/1.jpg"
+                  src="/images/students/6.jpg"
                   alt=""
                 />
               </td>
@@ -183,7 +203,7 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/students/1.jpg"
+                  src="/images/students/7.jpg"
                   alt=""
                 />
               </td>
@@ -208,7 +228,7 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/students/1.jpg"
+                  src="/images/students/8.jpg"
                   alt=""
                 />
               </td>
@@ -258,7 +278,7 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/students/1.jpg"
+                  src="/images/students/2.jpg"
                   alt=""
                 />
               </td>

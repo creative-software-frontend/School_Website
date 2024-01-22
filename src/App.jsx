@@ -9,7 +9,10 @@ import LibraryPage from "./pages/institue-information/library";
 import CulturalHistoryPage from "./pages/institue-information/culturalHistory";
 import TeachersPage from "./pages/teacher-information/Teachers";
 import DirectorsPage from "./pages/teacher-information/Director";
-import StudentsPage from "./pages/student-information/Teachers";
+import StudentsPage from "./pages/student-information/Students";
+import BrilliantStudentsPage from "./pages/student-information/BrilliantStudents";
+import LecturesPage from "./pages/student-information/Lectures";
+import QuestionsPage from "./pages/student-information/Questions";
 
 function App() {
   return (
@@ -42,7 +45,9 @@ function App() {
          */}
 
         <Route path="/students" element={<StudentsPage />} />
-        {/* <Route path="/directors" element={<DirectorsPage />} /> */}
+        <Route path="/brilliant-students" element={<BrilliantStudentsPage />} />
+        <Route path="/lectures" element={<LecturesPage />} />
+        <Route path="/questions" element={<QuestionsPage />} />
       </Routes>
       <Footer />
     </>
