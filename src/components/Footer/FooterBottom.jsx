@@ -8,10 +8,6 @@ const FooterBottom = () => {
           Creative Software
         </a>
       </p>
-<<<<<<< HEAD
-=======
-
->>>>>>> 5d258b207b1598ea5767ef3935b0329075407ec4
     </div>
   );
 };
