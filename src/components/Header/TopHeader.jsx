@@ -12,7 +12,7 @@ const TopHeader = () => {
       const month = now.getMonth() + 1; // Months are zero-based
       const year = now.getFullYear();
 
-      const formattedDate = `${month}/${day}/${year}`;
+      const formattedDate = `${day}-${month}-${year}`;
 
       // Format the time
       const hours = now.getHours();
@@ -57,10 +57,9 @@ const TopHeader = () => {
             <i className="fa fa-language me-1"></i> English |
           </a>
           <p className="d-flex align-items-center">
-            <i className="fa fa-sign-in me-1"></i>Login{" "}
-            <i className="fa fa-angle-right me-1 ms-1"></i>
+            <i className="fa fa-sign-in me-1"></i>Login -
             <a className="text-white me-1" href="#">
-              Guardian
+              &nbsp;Guardian
             </a>{" "}
             |
             <a className="text-white ms-1" href="#">

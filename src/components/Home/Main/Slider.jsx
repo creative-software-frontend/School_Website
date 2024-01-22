@@ -2,7 +2,7 @@ const Slider = () => {
   return (
     <div
       id="carouselExampleIndicators"
-      className="carousel slide"
+      className="carousel slide pt-2"
       data-bs-ride="carousel"
     >
       <div className="carousel-indicators">

@@ -8,13 +8,6 @@ const FooterBottom = () => {
           Creative Software
         </a>
       </p>
-      <div>
-        <img
-          src="/images/play-store.png"
-          alt=""
-          style={{ width: "100px", objectFit: "cover" }}
-        />
-      </div>
     </div>
   );
 };

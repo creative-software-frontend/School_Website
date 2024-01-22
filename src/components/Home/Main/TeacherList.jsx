@@ -3,7 +3,7 @@ import React from "react";
 
 const TeacherList = () => {
   return (
-    <div className="row my-3 teacher-list">
+    <div className="row my-3 teacher-list px-2">
       <TeacherCard
         name="John Doe"
         designation="Principal"

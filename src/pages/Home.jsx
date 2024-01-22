@@ -6,12 +6,12 @@ const HomePage = () => {
   return (
     <div
       style={{ paddingLeft: "0px", paddingRight: "0px" }}
-      className="container homepage-main-container mt-2"
+      className="container homepage-main-container mt-1"
     >
-      <div className="container my-3">
+      <div className="container my-1">
         <NewsUpdate />
       </div>
-      <div className="row gap-3">
+      <div className="row gap-1">
         <div className="col-lg-8 card ms-4">
           <HomeMain />
         </div>

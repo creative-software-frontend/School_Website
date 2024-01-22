@@ -45,17 +45,24 @@ const FooterMain = () => {
       </div>
       <div className="col-lg-3 footer-links">
         <h2 className="footer-col-heading">প্রতিষ্ঠানের তথ্য</h2>
-        <ul>
-          <li>
-            <a href="#">এপস ডাউনলোড</a>
-          </li>
+        <ul className="mb-1">
           <li>
             <a href="#">আমাদের সম্পর্কে</a>
           </li>
           <li>
             <a href="#">যোগাযোগ</a>
           </li>
+          <li>
+            <a href="#">এপস ডাউনলোড</a>
+          </li>
         </ul>
+        <div>
+          <img
+            src="/images/play-store.png"
+            alt=""
+            style={{ width: "200px", objectFit: "cover" }}
+          />
+        </div>
       </div>
       <div className="col-lg-3 footer-links">
         <h2 className="footer-col-heading">সেবা সমুহ</h2>

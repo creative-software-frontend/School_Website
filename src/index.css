@@ -44,7 +44,7 @@ td {
 /* custom css */
 
 .sidebar-col-lg-3 {
-  width: 29%;
+  width: 29.5%;
 }
 
 .carousel-item img {
@@ -55,7 +55,7 @@ td {
 .teacher img {
   height: 150px;
   object-fit: cover;
-  width: 130px;
+  /* width: 130px; */
 }
 .teacher-list .col-lg-2 {
   padding-left: 3px !important;
@@ -129,7 +129,7 @@ td {
 .footer-main {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  margin-top: 20px;
+  margin-top: 5px;
   padding: 10px;
   margin-right: 0px !important;
   margin-left: 0px !important;
@@ -168,5 +168,24 @@ td {
 }
 .bg-light-grey {
   background: lightgrey;
+}
+
+/* sidebar notice board */
+.news img {
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  height: 70px;
+}
+.news-content h4 {
+  font-weight: bold;
+}
+.news-subheading {
+  font-size: 14px;
+  margin-top: 5px;
+}
+.news-source {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 5px;
 }
 /* responsive css */
