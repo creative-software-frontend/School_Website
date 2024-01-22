@@ -19,7 +19,7 @@ const ImportantFigures = () => {
         designation="অধ্যক্ষ"
         image="3.jpg"
       />
-    </div>
+    
   );
 };
 
