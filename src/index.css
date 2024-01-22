@@ -40,6 +40,15 @@ ul {
 td {
   vertical-align: middle;
 }
+.control-dots {
+  background: rgba(0, 0, 0, 0.4);
+  width: 90px !important;
+  text-align: center;
+  margin-top: 10px !important;
+  left: 50%;
+  border-radius: 10px;
+  bottom: 6px !important;
+}
 
 /* custom css */
 
@@ -187,5 +196,131 @@ td {
   padding-top: 2px;
   padding-bottom: 2px;
   border-radius: 5px;
+}
+.teacher-content .card-title {
+  font-size: 15px !important;
+}
+.teacher-content .card-text {
+  font-size: 13px !important;
+}
+/* brilliant students */
+.brilliant {
+  border: none !important;
+}
+.brilliant img {
+  border-radius: 50%;
+  width: 140px;
+  height: 170px;
+  object-fit: cover;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border: 2px solid var(--primary-color);
+}
+.brilliant-section .control-dots {
+  bottom: -10px !important;
+}
+.brilliant p:nth-of-type(2) {
+  color: grey;
+  font-size: 12px;
+  margin-top: 2px;
+}
+.brilliant p span {
+  background: var(--primary-color);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+/* Photo Gallery Image */
+
+/* Position the image container (needed to position the left and right arrows) */
+.photo-container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.mySlides img {
+  height: 480px;
+  object-fit: cover;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 77, 20, 0.8);
+  color: #fff !important;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 3px 12px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 77, 20, 0.8);
+  border-radius: 7px;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
 /* responsive css */

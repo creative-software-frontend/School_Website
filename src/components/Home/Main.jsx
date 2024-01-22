@@ -2,6 +2,8 @@ import React from "react";
 import Slider from "./Main/Slider";
 import TeacherList from "./Main/TeacherList";
 import Information from "./Main/Information";
+import BrilliantStudents from "./Main/BrilliantStudents";
+import PhotoGallery from "./Main/PhotoGallery";
 
 const HomeMain = () => {
   return (
@@ -9,6 +11,8 @@ const HomeMain = () => {
       <Slider />
       <TeacherList />
       <Information />
+      <BrilliantStudents />
+      <PhotoGallery />
     </>
   );
 };

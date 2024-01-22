@@ -23,7 +23,9 @@ const StudentsPage = () => {
           </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                1
+              </th>
               <td>
                 <img
                   style={{
@@ -31,7 +33,232 @@ const StudentsPage = () => {
                     height: "70px",
                     objectFit: "cover",
                   }}
-                  src="/images/teacher/3.png"
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                2
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                3
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                4
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                5
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                6
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                7
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                8
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                9
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
+                  alt=""
+                />
+              </td>
+              <td>2023010001</td>
+              <td>Abdur Rahman</td>
+              <td>01877-112233</td>
+              <td>2020</td>
+              <td>Morning</td>
+              <td>A</td>
+              <td>Five</td>
+              <td>New Market Road, Dhaka</td>
+              <td>F: Shakib Rahman</td>
+            </tr>
+            <tr>
+              <th style={{ verticalAlign: "middle" }} scope="row">
+                10
+              </th>
+              <td>
+                <img
+                  style={{
+                    width: "100px",
+                    height: "70px",
+                    objectFit: "cover",
+                  }}
+                  src="/images/students/1.jpg"
                   alt=""
                 />
               </td>
