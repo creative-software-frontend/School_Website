@@ -2,7 +2,7 @@ import ImportantFigureCard from "@/components/Common/ImportantFigureCard";
 
 const ImportantFigures = () => {
   return (
-    <>
+     <>
       <ImportantFigureCard
         name={"Md Sahin"}
         designation="জেলা প্রশাসক"
@@ -19,7 +19,7 @@ const ImportantFigures = () => {
         designation="অধ্যক্ষ"
         image="3.jpg"
       />
-    
+    </>
   );
 };
 
