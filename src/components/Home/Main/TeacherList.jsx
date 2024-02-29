@@ -1,88 +1,59 @@
-import TeacherCard from "@/components/Common/TeacherCard";
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { useFrontendContext } from "@/context/FrontendContext";
+import TeacherCard from "@/components/Common/TeacherCard";
 
 const TeacherList = () => {
+  const { teachers, backendUrl } = useFrontendContext();
+
+  const renderTeacherCards = () => {
+    const numberOfDivs = Math.ceil(teachers.length / 6);
+
+    const renderCardsForDiv = (start, end) => {
+      return teachers.slice(start, end).map((teacher) => (
+        <TeacherCard
+          key={teacher.id}
+          name={teacher.users.name}
+          designation="Teacher" // You may need to get designation from the data
+          image={
+            teacher.image
+              ? backendUrl + "/" + teacher.image
+              : "images/teacher/default.png"
+          } // Provide a default image if not available
+        />
+      ));
+    };
+
+    const renderDivs = () => {
+      const divs = [];
+      for (let i = 0; i < numberOfDivs; i++) {
+        const start = i * 6;
+        const end = (i + 1) * 6;
+        const cards = renderCardsForDiv(start, end);
+
+        divs.push(
+          <div
+            key={i}
+            className="carousel-images-container d-flex my-4 mb-5 teacher-list px-2"
+          >
+            {cards.length > 0 ? cards : <p>No teachers available</p>}
+          </div>
+        );
+      }
+      return divs;
+    };
+
+    return renderDivs();
+  };
+
   return (
     <Carousel autoPlay infiniteLoop showThumbs={false}>
-      <div className="carousel-images-container d-flex my-4 mb-5 teacher-list px-2">
-        <TeacherCard
-          name="John Doe"
-          designation="Principal"
-          image={"teacher.jpg"}
-        />
-        <TeacherCard
-          name="Mr Kamal"
-          designation="Vice Principal"
-          image={"1.jpg"}
-        />
-        <TeacherCard name="Nafiz Iqbal" designation="Teacher" image={"3.png"} />
-        <TeacherCard
-          name="Salina Akter"
-          designation="Teacher"
-          image={"4.jpg"}
-        />
-        <TeacherCard
-          name="Rasel Kanti"
-          designation="Asst Teacher"
-          image={"5.jpg"}
-        />
-        <TeacherCard
-          name="Sakib Rahman"
-          designation="Lecturer"
-          image={"6.jpg"}
-        />
-      </div>
-      <div className="carousel-images-container d-flex my-4 mb-5 teacher-list px-2">
-        <TeacherCard name="John Doe" designation="Principal" image={"1.jpg"} />
-        <TeacherCard
-          name="Mr Kamal"
-          designation="Vice Principal"
-          image={"teacher.jpg"}
-        />
-        <TeacherCard name="Nafiz Iqbal" designation="Teacher" image={"3.png"} />
-        <TeacherCard
-          name="Salina Akter"
-          designation="Teacher"
-          image={"5.jpg"}
-        />
-        <TeacherCard
-          name="Rasel Kanti"
-          designation="Asst Teacher"
-          image={"4.jpg"}
-        />
-
-        <TeacherCard
-          name="Sakib Rahman"
-          designation="Lecturer"
-          image={"teacher.jpg"}
-        />
-      </div>
-      <div className="carousel-images-container d-flex my-4 mb-5 teacher-list px-2">
-        <TeacherCard name="John Doe" designation="Principal" image={"4.jpg"} />
-        <TeacherCard
-          name="Mr Kamal"
-          designation="Vice Principal"
-          image={"1.jpg"}
-        />
-        <TeacherCard name="Nafiz Iqbal" designation="Teacher" image={"3.png"} />
-        <TeacherCard
-          name="Salina Akter"
-          designation="Teacher"
-          image={"6.jpg"}
-        />
-        <TeacherCard
-          name="Rasel Kanti"
-          designation="Asst Teacher"
-          image={"6.jpg"}
-        />
-        <TeacherCard
-          name="Sakib Rahman"
-          designation="Lecturer"
-          image={"5.jpg"}
-        />
-      </div>
+      {teachers.length > 0 ? (
+        renderTeacherCards()
+      ) : (
+        <p>No teachers available</p>
+      )}
     </Carousel>
   );
 };

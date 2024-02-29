@@ -11,11 +11,14 @@ import "./assets/js/bootstrap.min.js";
 // router config
 
 import { BrowserRouter as Router } from "react-router-dom";
+import { FrontendProvider } from "./context/FrontendContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
-      <App />
+      <FrontendProvider>
+        <App />
+      </FrontendProvider>
     </Router>
   </React.StrictMode>
 );

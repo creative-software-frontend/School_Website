@@ -1,27 +1,35 @@
+import { useFrontendContext } from "@/context/FrontendContext";
+
 const FooterMain = () => {
+  const { institute } = useFrontendContext();
+
   return (
     <div className="row footer-main py-4 pb-3">
       <div className="col-lg-3 ">
         <h2 className="footer-col-heading">যোগাযোগ</h2>
 
-        <div className="footer-contact">
-          <h4 className="h5 mb-1">ঢাকা স্কুল এবং কলেজ</h4>
-          <p>
-            <i className="fa fa-map-marker"></i> New market road, mirpur, Dhaka
-          </p>
-          <p>
-            <i className="fa fa-id-card-o"></i> School Code: 1202
-          </p>
-          <p>
-            <i className="fa fa-phone"></i> 01821 229988
-          </p>
-          <p>
-            <i className="fa fa-envelope"></i> school@gmail.com
-          </p>
-          <p>
-            <i className="fa fa-globe"></i> www.school.com
-          </p>
-        </div>
+        {institute[0] && (
+          <div className="footer-contact">
+            <h4 className="h5 mb-1">{institute[0].school_name}</h4>
+            <p className="d-flex align-items-start">
+              <i className="fa fa-map-marker me-2 mt-2"></i>{" "}
+              {institute[0].address}
+            </p>
+            <p>
+              <i className="fa fa-id-card-o"></i> School Code:{" "}
+              {institute[0].eiin_no}
+            </p>
+            <p>
+              <i className="fa fa-phone"></i> {institute[0].phone}
+            </p>
+            <p>
+              <i className="fa fa-envelope"></i> {institute[0].email}
+            </p>
+            <p>
+              <i className="fa fa-globe"></i> www.school.com
+            </p>
+          </div>
+        )}
       </div>
       <div className="col-lg-3 footer-links">
         <h2 className="footer-col-heading">সহায়তা কেন্দ্র</h2>

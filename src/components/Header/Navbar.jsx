@@ -135,6 +135,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              {/* academic */}
               <li class="nav-item dropdown">
                 <a
                   class="nav-link text-white dropdown-toggle"
@@ -151,14 +152,14 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/academic-calendar">
                       একাডেমিক ক্যালেন্ডার
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/class-exam-routine">
                       ক্লাস পরীক্ষার রুটিন
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
@@ -198,9 +199,9 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <Link class="dropdown-item" to="/online-admission">
                       অনলাইনে ভর্তি
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
