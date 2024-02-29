@@ -4,7 +4,7 @@ const NewsUpdate = () => {
       <div>
         <span className="bg-primary py-2 px-2">নিউজ আপডেট</span>
         <marquee width="90%" behavior="" direction="">
-          রংপুর স্কুল এন্ড কলেজে ভর্তি চলছে
+        প্রতিষ্ঠানের ওয়েবসাইট এর তথ্য হালনাগাদের কাজ চলায় বিভিন্ন পেজ এ সম্পূর্ণ তথ্য না থাকায় আমরা আন্তরিক ভাবে দুঃখিত।	
         </marquee>
       </div>
     </div>

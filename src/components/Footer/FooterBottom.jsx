@@ -5,7 +5,7 @@ const FooterBottom = () => {
       <p>
         Powered By:{" "}
         <a href="#" target="_blank">
-          Creative Software
+          Go Future
         </a>
       </p>
     </div>
