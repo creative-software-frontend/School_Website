@@ -4,9 +4,11 @@ import axiosPublic from "@/api/axiosPublic";
 const FrontendContext = createContext({});
 
 export const FrontendProvider = ({ children }) => {
-  // institute
   const [institute, setInstitute] = useState({});
   const [teachers, setTeachers] = useState({});
+  const [students, setStudents] = useState([]);
+  const [classes, setClasses] = useState([]);
+  const [sessions, setSessions] = useState([]);
 
   // loader
   const [loader, setLoader] = useState(false);
@@ -20,8 +22,12 @@ export const FrontendProvider = ({ children }) => {
       const { data } = await axiosPublic.get("/homepage-data");
       setInstitute(data.institute);
       setTeachers(data.teachers);
+      setStudents(data.students);
+      setClasses(data.classes);
+      setSessions(data.sessions);
       setLoader(false);
     } catch (error) {
+      setLoader(false);
       // Handle errors here
       console.error("Error fetching data:", error);
     }
@@ -36,6 +42,9 @@ export const FrontendProvider = ({ children }) => {
       value={{
         institute,
         teachers,
+        students,
+        classes,
+        sessions,
         loader,
         backendUrl,
       }}

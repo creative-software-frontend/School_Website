@@ -15,7 +15,7 @@ const TeacherList = () => {
         <TeacherCard
           key={teacher.id}
           name={teacher.users.name}
-          designation="Teacher" // You may need to get designation from the data
+          designation={teacher.designation}
           image={
             teacher.image
               ? backendUrl + "/" + teacher.image

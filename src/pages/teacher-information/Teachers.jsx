@@ -4,6 +4,15 @@ import { useFrontendContext } from "@/context/FrontendContext";
 const TeachersPage = () => {
   const { teachers, backendUrl } = useFrontendContext();
 
+  const formatDate = (dateString) => {
+    const options = { day: "numeric", month: "long", year: "numeric" };
+    const formattedDate = new Date(dateString).toLocaleDateString(
+      undefined,
+      options
+    );
+    return formattedDate;
+  };
+
   return (
     <div className="container">
       <PageCard title="সকল শিক্ষক" />
@@ -42,10 +51,11 @@ const TeachersPage = () => {
                     />
                   </td>
                   <td>{teacher.users.name}</td>
-                  <td>{teacher.phone}</td>
-                  <td>Designation</td>
-                  <td>7 Feb, 2020</td>
-                  <td>Master of Arts (MA)</td>
+                  <td>{teacher.users.mobile}</td>
+                  <td>{teacher.designation}</td>
+                  {/* <td>7 Feb, 2020</td> */}
+                  <td>{formatDate(teacher.joining_date)}</td>
+                  <td>{teacher.educational_qualification}</td>
                 </tr>
               ))}
           </tbody>
