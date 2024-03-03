@@ -14,10 +14,11 @@ import BrilliantStudentsPage from "./pages/student-information/BrilliantStudents
 import LecturesPage from "./pages/student-information/Lectures";
 import QuestionsPage from "./pages/student-information/Questions";
 import AcademicCalendarPage from "./pages/academic/AcademiCalendar";
-import ClassExamRoutinePage from "./pages/academic/ClassExamRoutine";
 import OnlineAdmissionPage from "./pages/admission/OnlineAdmission";
 import { useFrontendContext } from "./context/FrontendContext";
 import Spinner from "./components/my/Spinner";
+import ExamRoutinePage from "./pages/academic/ExamRoutine";
+import ClassRoutinePage from "./pages/academic/ClassRoutine";
 
 function App() {
   const { loader } = useFrontendContext();
@@ -80,10 +81,8 @@ function App() {
               path="/academic-calendar"
               element={<AcademicCalendarPage />}
             />
-            <Route
-              path="/class-exam-routine"
-              element={<ClassExamRoutinePage />}
-            />
+            <Route path="/class-routine" element={<ClassRoutinePage />} />
+            <Route path="/exam-routine" element={<ExamRoutinePage />} />
             {/* <Route path="/brilliant-students" element={<BrilliantStudentsPage />} />
         <Route path="/lectures" element={<LecturesPage />} />
         <Route path="/questions" element={<QuestionsPage />} /> */}

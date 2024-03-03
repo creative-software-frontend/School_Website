@@ -12,13 +12,16 @@ import "./assets/js/bootstrap.min.js";
 
 import { BrowserRouter as Router } from "react-router-dom";
 import { FrontendProvider } from "./context/FrontendContext.jsx";
+import { CommonProvider } from "./context/CommonContext.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Router>
-      <FrontendProvider>
-        <App />
-      </FrontendProvider>
+      <CommonProvider>
+        <FrontendProvider>
+          <App />
+        </FrontendProvider>
+      </CommonProvider>
     </Router>
   </React.StrictMode>
 );

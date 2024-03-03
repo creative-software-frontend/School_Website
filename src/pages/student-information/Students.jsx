@@ -1,11 +1,15 @@
 import axiosPublic from "@/api/axiosPublic";
 import Spinner from "@/components/my/Spinner";
+import { useCommonContext } from "@/context/CommonContext";
 import { useFrontendContext } from "@/context/FrontendContext";
 import { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
 
 const StudentsPage = () => {
   const { students, classes, sessions, backendUrl } = useFrontendContext();
+
+  // capitalize first letter
+  const { capitalizeFirstLetter } = useCommonContext();
 
   // state for on change class
   const [selectedClass, setSelectedClass] = useState("");
@@ -190,8 +194,7 @@ const StudentsPage = () => {
             {classes.length &&
               classes.map((item) => (
                 <option value={item.id}>
-                  {item.class_name.charAt(0).toUpperCase() +
-                    item.class_name.slice(1)}
+                  {capitalizeFirstLetter(item.class_name)}
                 </option>
               ))}
           </select>

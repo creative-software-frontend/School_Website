@@ -30,6 +30,7 @@ ul {
 .cusror-pointer {
   cursor: pointer;
 }
+
 .bg-primary {
   background-color: var(--primary-color) !important;
   color: var(--secondary-color) !important;
@@ -334,5 +335,19 @@ td {
 .active,
 .demo:hover {
   opacity: 1;
+}
+
+/*
+* ---- Class Time Table
+*/
+
+.class_timetable_col {
+  font-weight: bold;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--primary-color);
+  width: 100%;
+}
+.timetable-cell div{
+  font-size: 15px;
 }
 /* responsive css */
