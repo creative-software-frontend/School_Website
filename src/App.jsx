@@ -19,6 +19,7 @@ import { useFrontendContext } from "./context/FrontendContext";
 import Spinner from "./components/my/Spinner";
 import ExamRoutinePage from "./pages/academic/ExamRoutine";
 import ClassRoutinePage from "./pages/academic/ClassRoutine";
+import OnlineResultPage from "./pages/result/OnlineResultPage";
 
 function App() {
   const { loader } = useFrontendContext();
@@ -90,6 +91,11 @@ function App() {
              ******* admission information *******
              */}
             <Route path="/online-admission" element={<OnlineAdmissionPage />} />
+
+            {/*
+             ******* result *******
+             */}
+            <Route path="/online-result" element={<OnlineResultPage />} />
           </Routes>
           <Footer />
         </>

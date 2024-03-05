@@ -22,7 +22,11 @@ const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/" aria-current="page">
+                <Link
+                  className="nav-link text-white"
+                  to="/"
+                  aria-current="page"
+                >
                   প্রথম পাতা
                 </Link>
               </li>
@@ -193,7 +197,7 @@ const Navbar = () => {
                   className="dropdown-menu"
                   aria-labelledby="navbarDropdownMenuLink"
                 >
-                  <li>
+                  {/* <li>
                     <a className="dropdown-item" href="#">
                       ভর্তি তথ্য
                     </a>
@@ -202,7 +206,7 @@ const Navbar = () => {
                     <a className="dropdown-item" href="#">
                       ভর্তি ফর্ম
                     </a>
-                  </li>
+                  </li> */}
                   <li>
                     <Link className="dropdown-item" to="/online-admission">
                       অনলাইনে ভর্তি
@@ -226,9 +230,9 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/online-result">
                       রেজাল্ট পরিসংখ্যান
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>

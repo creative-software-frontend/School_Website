@@ -347,7 +347,26 @@ td {
   border-bottom: 2px solid var(--primary-color);
   width: 100%;
 }
-.timetable-cell div{
+.timetable-cell div {
   font-size: 15px;
 }
+
+/* online result */
+
+.student-details .col-lg-4 p {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+.student-details .col-lg-4 p .font-weight-b {
+  /* font-weight: 500 !important; */
+}
+.student-photo img {
+  height: 180px;
+  width: 150px;
+  object-fit: cover;
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  object-position: top;
+}
+
 /* responsive css */
