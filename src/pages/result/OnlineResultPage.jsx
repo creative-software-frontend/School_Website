@@ -1,6 +1,7 @@
 import axiosPublic from "@/api/axiosPublic";
 import ProfileCardHeading from "@/components/Common/ProfileCardHeading";
 import Spinner from "@/components/my/Spinner";
+import { useCommonContext } from "@/context/CommonContext";
 import { useFrontendContext } from "@/context/FrontendContext";
 import { useState } from "react";
 
@@ -16,6 +17,10 @@ const OnlineResultPage = () => {
 
   // examlist data from context api or store
   const { examList, institute, backendUrl } = useFrontendContext();
+
+  // capitalize functon from common context
+
+  const { capitalizeFirstLetter } = useCommonContext();
 
   // store server returned result in a state
   const [result, setResult] = useState("");
@@ -148,7 +153,7 @@ const OnlineResultPage = () => {
                       result[0].entries.personal.last_name}
                 </p>
                 <p>
-                  <span className="font-weight-b">Student ID:</span>
+                  <span className="font-weight-b">Student ID: </span>
                   {result[0].entries.academic &&
                     result[0].entries.academic.admission_no}
                 </p>
@@ -158,19 +163,21 @@ const OnlineResultPage = () => {
                     result[0].entries.guardian.father_name}
                 </p>
                 <p>
-                  <span className="font-weight-b">Mother's Name:</span>
+                  <span className="font-weight-b">Mother's Name: </span>
                   {result[0].entries.guardian &&
                     result[0].entries.guardian.mother_name}
                 </p>
               </div>
               <div className="col-lg-4">
                 <p>
-                  <span className="font-weight-b">Class:</span>
+                  <span className="font-weight-b">Class: </span>
                   {result[0].entries.academic &&
-                    result[0].entries.academic.class.class_name}
+                    capitalizeFirstLetter(
+                      result[0].entries.academic.class.class_name
+                    )}
                 </p>
                 <p>
-                  <span className="font-weight-b">Roll No:</span>
+                  <span className="font-weight-b">Roll No: </span>
                   {result[0].entries.academic &&
                     result[0].entries.academic.roll_number}
                 </p>

@@ -11,8 +11,21 @@ export const CommonProvider = ({ children }) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
-  // Format Date like 31-02-2024
+  // Function to get today's date in the format "YYYY-MM-DD"
+  function getTodayDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
 
+    // Ensure month and day are two digits
+    month = month < 10 ? `0${month}` : month;
+    day = day < 10 ? `0${day}` : day;
+
+    return `${year}-${month}-${day}`;
+  }
+
+  // Format Date like 31-02-2024
   const formatDate = (str) => {
     // Convert the string to a JavaScript Date object
     const dateObject = new Date(str);
@@ -75,6 +88,7 @@ export const CommonProvider = ({ children }) => {
         getDayName,
         formatTime,
         calculateDuration,
+        getTodayDate,
       }}
     >
       {children}
