@@ -7,13 +7,13 @@ const axiosPublic = axios.create({
 });
 export const axiosOnly = axios.create({
   baseURL: import.meta.env.VITE_BACKEND_URL,
-  withCredentials: true,
+  // withCredentials: true,
 });
 export default axiosPublic;
 
 export const csrf = async () => {
   try {
-    const response = await axiosPublic.get("/sanctum/csrf-cookie");
+    const response = await axiosOnly.get("/sanctum/csrf-cookie");
     return response.data.CSRF_TOKEN; // Return the CSRF token if needed
   } catch (error) {
     console.error("Error fetching CSRF token:", error);

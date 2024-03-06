@@ -10,6 +10,7 @@ export const FrontendProvider = ({ children }) => {
   const [classes, setClasses] = useState([]);
   const [sessions, setSessions] = useState([]);
   const [departments, setDepartments] = useState([]);
+  const [districts, setDistricts] = useState([]);
   const [currennt_session, setCurrentSession] = useState({});
   const [examList, setExamList] = useState([]);
 
@@ -29,6 +30,7 @@ export const FrontendProvider = ({ children }) => {
       setClasses(data.classes);
       setSessions(data.sessions);
       setDepartments(data.departments);
+      setDistricts(data.districts);
       setCurrentSession(data.current_session);
       setExamList(data.exam_list);
       setLoader(false);
@@ -52,6 +54,7 @@ export const FrontendProvider = ({ children }) => {
         classes,
         sessions,
         departments,
+        districts,
         currennt_session,
         examList,
         loader,

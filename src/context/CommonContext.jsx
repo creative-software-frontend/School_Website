@@ -3,8 +3,6 @@ import { createContext, useContext, useEffect, useState } from "react";
 const CommonContext = createContext({});
 
 export const CommonProvider = ({ children }) => {
-  //   const [institute, setInstitute] = useState({});
-
   // Capitalize First Letter
 
   const capitalizeFirstLetter = (str) => {
