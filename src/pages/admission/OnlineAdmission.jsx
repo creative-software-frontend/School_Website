@@ -1,6 +1,7 @@
 import axiosPublic, { csrf } from "@/api/axiosPublic";
 import ProfileCardHeading from "@/components/Common/ProfileCardHeading";
 import SpinnerButton from "@/components/my/SpinnerButton";
+import ToastComponents from "@/components/my/Toast";
 import { useCommonContext } from "@/context/CommonContext";
 import { useFrontendContext } from "@/context/FrontendContext";
 import { useRef, useState } from "react";
@@ -11,12 +12,13 @@ const OnlineAdmissionPage = () => {
   // loader state to show form submitting
   const [loader, setLoader] = useState(false);
 
+  // success Message after successful Form Submission
+  const [successMessage, setSuccessMessage] = useState(false);
+
   // upload image file error ( less than 2 mb and must be an image)
   const [fileError, setFileError] = useState("");
 
   // academic details states for form submission
-  const [rollNumber, setRollNumber] = useState("");
-  const [registrationNumber, setRegistrationNumber] = useState("");
   const [classId, setClassId] = useState("");
 
   const [departmentId, setDepartmentId] = useState("");
@@ -60,6 +62,8 @@ const OnlineAdmissionPage = () => {
   const [previousSchoolName, setPreviousSchoolName] = useState("");
   const [previousSchoolAddress, setPreviousSchoolAddress] = useState("");
 
+  console.log(successMessage);
+
   // get today date from store for selecting default today date in admission date
   // get capitalize firstLetter from store
   // get file Error & Handle File Change From Store
@@ -102,7 +106,6 @@ const OnlineAdmissionPage = () => {
           return;
         } else {
           setFileError("");
-          // Do something with the valid file
         }
       }
     }
@@ -118,25 +121,6 @@ const OnlineAdmissionPage = () => {
     const formData = new FormData();
 
     // Append other form data fields to FormData
-    formData.append("rollNumber", rollNumber);
-    formData.append("registrationNumber", registrationNumber);
-    formData.append("classId", classId);
-    formData.append("sessionId", sessionId);
-    formData.append("departmentId", departmentId);
-    formData.append("versionId", versionId);
-    formData.append("firstName", firstName);
-    formData.append("lastName", lastName);
-    formData.append("gender", gender);
-    formData.append("dateOfBirth", dateOfBirth);
-    formData.append("religion", religion);
-    formData.append("mobileNo", mobileNo);
-    formData.append("email", email);
-    formData.append("bloodGroup", bloodGroup);
-    formData.append("countryId", countryId);
-    formData.append("districtId", districtId);
-    // Append other form data fields to FormData
-    formData.append("rollNumber", rollNumber);
-    formData.append("registrationNumber", registrationNumber);
     formData.append("classId", classId);
     formData.append("sessionId", sessionId);
     formData.append("departmentId", departmentId);
@@ -189,10 +173,13 @@ const OnlineAdmissionPage = () => {
         },
       });
       setLoader(false);
-      alert(data);
+      setSuccessMessage(data);
       studentPhotoRef.current.value = ""; // Clear the file input
       // Reset the form after successful submission
       formReset();
+      setTimeout(() => {
+        setSuccessMessage(false);
+      }, 5000);
     } catch (error) {
       setLoader(false);
       // Handle errors
@@ -203,8 +190,6 @@ const OnlineAdmissionPage = () => {
   // Reset form after submission
 
   const formReset = () => {
-    setRollNumber("");
-    setRegistrationNumber("");
     setClassId("");
     setDepartmentId("");
     setFirstName("");
@@ -240,6 +225,15 @@ const OnlineAdmissionPage = () => {
   };
   return (
     <div className="container">
+      {/* toast success message */}
+      {successMessage && (
+        <ToastComponents
+          successMessage={successMessage}
+          setSuccessMessage={setSuccessMessage}
+        />
+      )}
+      {/* end toast success */}
+
       {/* page header */}
       <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between">
         <ProfileCardHeading heading={"অনলাইনে ভর্তি । Online Admission"} />
@@ -271,30 +265,6 @@ const OnlineAdmissionPage = () => {
               />
             </div>
 
-            <div className="form-group col-md-4">
-              <label className="form-label">Roll Number</label>
-              <input
-                type="text"
-                className="form-control"
-                name="roll_number"
-                id="roll_number"
-                placeholder="Enter Roll Number"
-                value={rollNumber}
-                onChange={(e) => setRollNumber(e.target.value)}
-              />
-            </div>
-            <div className="form-group col-md-4">
-              <label className="form-label">Registration Number</label>
-              <input
-                type="text"
-                className="form-control"
-                name="registration_number"
-                id="registration_number"
-                placeholder="Enter Registration Number"
-                value={registrationNumber}
-                onChange={(e) => setRegistrationNumber(e.target.value)}
-              />
-            </div>
             <div className="form-group  col-md-4">
               <label className="form-label">
                 Class <span className="text-danger">*</span>
@@ -306,6 +276,7 @@ const OnlineAdmissionPage = () => {
                 className="form-control class-select"
                 value={classId}
                 onChange={(e) => setClassId(e.target.value)}
+                required
               >
                 <option value="">Select Class</option>
                 {classes &&
@@ -390,6 +361,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter First Name"
                 value={firstName}
                 onChange={(e) => setFirstName(e.target.value)}
+                required
               />
             </div>
 
@@ -403,6 +375,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Last Name"
                 value={lastName}
                 onChange={(e) => setLastName(e.target.value)}
+                required
               />
             </div>
 
@@ -417,6 +390,7 @@ const OnlineAdmissionPage = () => {
                 className="form-control"
                 value={gender}
                 onChange={(e) => setGender(e.target.value)}
+                required
               >
                 <option value="">Select Gender</option>
                 <option value="male">Male</option>
@@ -435,6 +409,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Date of Birth"
                 value={dateOfBirth}
                 onChange={(e) => setDateOfBirth(e.target.value)}
+                required
               />
             </div>
 
@@ -466,6 +441,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter  Mobile No"
                 value={mobileNo}
                 onChange={(e) => setMobileNo(e.target.value)}
+                required
               />
             </div>
 
@@ -548,6 +524,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Address"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
+                required
               />
             </div>
 
@@ -601,7 +578,6 @@ const OnlineAdmissionPage = () => {
                 name="student_photo"
                 accept=".jpg, .jpeg, .png"
                 ref={studentPhotoRef}
-                // onChange={(e) => setStudentPhoto(e.target.files[0])}
                 onChange={handleFileChange}
               />
               <div
@@ -633,6 +609,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Father Name"
                 value={fatherName}
                 onChange={(e) => setFatherName(e.target.value)}
+                required
               />
             </div>
 
@@ -646,6 +623,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Father Phone"
                 value={fatherPhone}
                 onChange={(e) => setFatherPhone(e.target.value)}
+                required
               />
             </div>
 
@@ -659,6 +637,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Father Occupation"
                 value={fatherOccupation}
                 onChange={(e) => setFatherOccupation(e.target.value)}
+                required
               />
             </div>
 
@@ -672,6 +651,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Mother Name"
                 value={motherName}
                 onChange={(e) => setMotherName(e.target.value)}
+                required
               />
             </div>
             <div className="form-group col-md-4">
@@ -684,6 +664,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Mother Phone"
                 value={motherPhone}
                 onChange={(e) => setMotherPhone(e.target.value)}
+                required
               />
             </div>
 
@@ -697,6 +678,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Mother Occupation"
                 value={motherOccupation}
                 onChange={(e) => setMotherOccupation(e.target.value)}
+                required
               />
             </div>
 
@@ -798,6 +780,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Current Address"
                 value={currentAddress}
                 onChange={(e) => setCurrentAddress(e.target.value)}
+                required
               />
             </div>
             <div className="form-group col-md-6">
@@ -810,6 +793,7 @@ const OnlineAdmissionPage = () => {
                 placeholder="Enter Permanent Address"
                 value={permanentAddress}
                 onChange={(e) => setPermanentAddress(e.target.value)}
+                required
               />
             </div>
 
@@ -849,11 +833,7 @@ const OnlineAdmissionPage = () => {
           {/* form submit */}
           <div className="row justify-content-end">
             <div className="col-lg-4 d-flex justify-content-end">
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleSubmit}
-              >
+              <button type="submit" className="btn btn-primary">
                 {loader ? <SpinnerButton text={"Submitting..."} /> : "Submit"}
               </button>
             </div>

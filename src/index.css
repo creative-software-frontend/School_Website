@@ -1,4 +1,5 @@
 /* bootstrap css v-5 */
+@import "/src/assets/css/my-style.css";
 @import "/src/assets/css/bootstrap.css";
 
 /* default css */
@@ -370,9 +371,61 @@ td {
 }
 
 /* online admission page */
-.form-group{
+.form-group {
   margin-bottom: 15px;
 }
 
+/* toast */
+
+/* Define the opacity fade animation */
+@keyframes opacityFade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Define the slide-in animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Apply the animation to the toast with the 'slide-in' class */
+.slide-in {
+  animation: slideIn 2s ease-in-out;
+}
+.opacity-fade {
+  animation: opacityFade 1s ease-in-out;
+}
+/* end toast */
+
+/* contact page */
+
+.contact-form-map {
+  background-color: lightgreen;
+}
+
+.dbox .icon span {
+  background: var(--primary-color);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-bottom .text {
+  margin-top: 5px;
+}
+/* end contact page */
 
 /* responsive css */

@@ -20,6 +20,7 @@ import Spinner from "./components/my/Spinner";
 import ExamRoutinePage from "./pages/academic/ExamRoutine";
 import ClassRoutinePage from "./pages/academic/ClassRoutine";
 import OnlineResultPage from "./pages/result/OnlineResultPage";
+import ContactPage from "./pages/contact/ContactPage";
 
 function App() {
   const { loader } = useFrontendContext();
@@ -96,6 +97,10 @@ function App() {
              ******* result *******
              */}
             <Route path="/online-result" element={<OnlineResultPage />} />
+            {/*
+             ******* contact *******
+             */}
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
           <Footer />
         </>

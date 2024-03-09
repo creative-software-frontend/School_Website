@@ -297,9 +297,13 @@ const Navbar = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="#" aria-current="page">
+                <Link
+                  className="nav-link text-white"
+                  to="/contact"
+                  aria-current="page"
+                >
                   যোগাযোগ
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
