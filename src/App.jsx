@@ -21,6 +21,8 @@ import ExamRoutinePage from "./pages/academic/ExamRoutine";
 import ClassRoutinePage from "./pages/academic/ClassRoutine";
 import OnlineResultPage from "./pages/result/OnlineResultPage";
 import ContactPage from "./pages/contact/ContactPage";
+import PhotoGalleryPage from "./pages/gallery/PhotoGalleryPage";
+import VideoGalleryPage from "./pages/gallery/VideoGallery";
 
 function App() {
   const { loader } = useFrontendContext();
@@ -97,6 +99,12 @@ function App() {
              ******* result *******
              */}
             <Route path="/online-result" element={<OnlineResultPage />} />
+            {/*
+             ******* gallery *******
+             */}
+            <Route path="/photo-gallery" element={<PhotoGalleryPage />} />
+            <Route path="/video-gallery" element={<VideoGalleryPage />} />
+
             {/*
              ******* contact *******
              */}

@@ -285,14 +285,14 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/photo-gallery">
                       ফটো গ্যালারী
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link className="dropdown-item" to="/video-gallery">
                       ভিডিও গ্যালারী
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
