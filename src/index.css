@@ -44,7 +44,7 @@ td {
 }
 .control-dots {
   background: rgba(0, 0, 0, 0.4);
-  width: 90px !important;
+  width: auto !important;
   text-align: center;
   margin-top: 10px !important;
   left: 50%;
@@ -427,5 +427,51 @@ td {
   margin-top: 5px;
 }
 /* end contact page */
+
+/* bonghu bondu corner */
+
+.bongobondhu-gallery .col-lg-4 {
+  margin-bottom: 10px;
+}
+
+.bongobondhu-gallery img {
+  height: 250px;
+  object-position: top;
+  object-fit: cover;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: var(--primary-color);
+}
+.nav-link {
+  color: var(--primary-color);
+}
+.nav-link:hover {
+  color: #07882c;
+}
+
+/* end bonghu bondu corner */
+
+/* bonghu bondu corner nav item animation */
+
+.special-link {
+  animation: colorTransition 3s infinite alternate;
+}
+
+@keyframes colorTransition {
+  0%,
+  100% {
+    transform: translateX(0); /* Initial Y translation */
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateX(9px);
+    opacity: 1;
+  }
+}
+
+/* end bonghu bondu corner nav item animation */
 
 /* responsive css */

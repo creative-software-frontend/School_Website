@@ -23,6 +23,8 @@ import OnlineResultPage from "./pages/result/OnlineResultPage";
 import ContactPage from "./pages/contact/ContactPage";
 import PhotoGalleryPage from "./pages/gallery/PhotoGalleryPage";
 import VideoGalleryPage from "./pages/gallery/VideoGallery";
+import PlanningPage from "./pages/planning/PlanningPage";
+import BongoBondhuCornerPage from "./pages/bongobondhu-corner/BongoBondhuCorner";
 
 function App() {
   const { loader } = useFrontendContext();
@@ -95,20 +97,23 @@ function App() {
              */}
             <Route path="/online-admission" element={<OnlineAdmissionPage />} />
 
-            {/*
-             ******* result *******
-             */}
+            {/* ******* result ******* */}
             <Route path="/online-result" element={<OnlineResultPage />} />
-            {/*
-             ******* gallery *******
-             */}
+
+            {/*  ******* Planning ******** */}
+            <Route path="/planning" element={<PlanningPage />} />
+            {/* ****** gallery ******* */}
             <Route path="/photo-gallery" element={<PhotoGalleryPage />} />
             <Route path="/video-gallery" element={<VideoGalleryPage />} />
 
-            {/*
-             ******* contact *******
-             */}
+            {/* ******* contact ******* */}
             <Route path="/contact" element={<ContactPage />} />
+
+            {/* ******* bongo bondhu corner ******* */}
+            <Route
+              path="/bonogobondhu-corner"
+              element={<BongoBondhuCornerPage />}
+            />
           </Routes>
           <Footer />
         </>

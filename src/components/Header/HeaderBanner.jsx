@@ -1,6 +1,6 @@
 const HeaderBanner = () => {
   return (
-    <div className="container mt-1">
+    <div className="container mt-1 header_banner">
       <img
         src="/images/school-banner.png"
         alt=""

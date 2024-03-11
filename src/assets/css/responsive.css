@@ -1,0 +1,67 @@
+@media only screen and (max-width: 767px) {
+  .container {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  /* Header -- top header */
+  .top-header-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .top-header-contact {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .sm_flex-column_items_center {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .sm_flex-column {
+    flex-direction: column;
+  }
+
+  /* Header -- banner header */
+
+  .header_banner img {
+    width: 98vw !important;
+    height: auto;
+  }
+
+  /* news update */
+
+  marquee {
+    margin-top: 15px;
+  }
+  /* Home - main */
+
+  .home-main-wrapper {
+    margin-left: 0px !important;
+  }
+
+  /* Home - sidebar */
+
+  .sidebar-col-lg-3 {
+    width: 100%;
+  }
+
+  /* Home - Brilliant STudentes */
+
+  .brilliant img {
+    width: 135px !important;
+    height: 135px !important;
+  }
+
+  /* Footer */
+  .footer-main {
+    flex-direction: column-reverse;
+  }
+  .footer-main .col-lg-3 {
+    margin-bottom: 10px;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center;
+  }
+}

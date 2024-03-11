@@ -74,6 +74,18 @@ export const CommonProvider = ({ children }) => {
     return `${hours} hours ${minutes} minutes`;
   };
 
+  // download pdf from storage
+
+  const downloadPdf = (fileName) => {
+    const filePath = `/src/assets/files/${fileName}.pdf`; // Adjust the path based on your folder structure
+    const link = document.createElement("a");
+    link.href = filePath;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   //   useEffect(() => {
   //     getHomePageData();
   //   }, []);
@@ -87,6 +99,7 @@ export const CommonProvider = ({ children }) => {
         formatTime,
         calculateDuration,
         getTodayDate,
+        downloadPdf,
       }}
     >
       {children}

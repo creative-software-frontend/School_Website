@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { useFrontendContext } from "@/context/FrontendContext";
 import TeacherCard from "@/components/Common/TeacherCard";
 
 const TeacherList = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [teacherSliderShow, setTeacherSliderShow] = useState(6);
+
   const { teachers, backendUrl } = useFrontendContext();
 
+  useEffect(() => {
+    if (isMobile) {
+      setTeacherSliderShow(2);
+      // alert(teacherSliderShow);
+    } else {
+      setTeacherSliderShow(6);
+    }
+  }, [isMobile]);
+
   const renderTeacherCards = () => {
-    const numberOfDivs = Math.ceil(teachers.length / 6);
+    const numberOfDivs = Math.ceil(teachers.length / teacherSliderShow);
 
     const renderCardsForDiv = (start, end) => {
       return teachers.slice(start, end).map((teacher) => (
@@ -28,8 +40,8 @@ const TeacherList = () => {
     const renderDivs = () => {
       const divs = [];
       for (let i = 0; i < numberOfDivs; i++) {
-        const start = i * 6;
-        const end = (i + 1) * 6;
+        const start = i * teacherSliderShow;
+        const end = (i + 1) * teacherSliderShow;
         const cards = renderCardsForDiv(start, end);
 
         divs.push(
@@ -46,6 +58,23 @@ const TeacherList = () => {
 
     return renderDivs();
   };
+
+  useEffect(() => {
+    const checkWindowWidth = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the width threshold as needed
+    };
+
+    // Initial check
+    checkWindowWidth();
+
+    // Attach event listener to window resize
+    window.addEventListener("resize", checkWindowWidth);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkWindowWidth);
+    };
+  }, []); // Empty dependency array to run the effect only once on mount
 
   return (
     <Carousel autoPlay infiniteLoop showThumbs={false}>

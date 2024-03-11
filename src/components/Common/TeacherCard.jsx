@@ -1,6 +1,6 @@
 const TeacherCard = ({ name, designation, image }) => {
   return (
-    <div className="col-lg-2">
+    <div className="col-lg-2 col-6">
       <div class="card teacher">
         <img src={image} class="card-img-top" alt="..." />
         <div class="card-body teacher-content">

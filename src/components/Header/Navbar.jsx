@@ -5,9 +5,7 @@ const Navbar = () => {
     <div className="container mt-1">
       <nav className="navbar navbar-expand-lg navbar-light bg-primary text-white">
         <div className="container-fluid">
-          {/* <Link className="navbar-brand text-white" to="/">
-            প্রথম পাতা
-          </Link> */}
+          <a href=""></a>
           <button
             className="navbar-toggler"
             type="button"
@@ -17,7 +15,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon text-white"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
             <ul className="navbar-nav">
@@ -237,32 +235,14 @@ const Navbar = () => {
                 </ul>
               </li>
 
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link text-white dropdown-toggle"
-                  href="#"
-                  id="navbarDropdownMenuLink"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
+              <li className="nav-item">
+                <Link
+                  className="nav-link text-white"
+                  to="/planning"
+                  aria-current="page"
                 >
                   পরিকল্পনা
-                </a>
-                <ul
-                  className="dropdown-menu"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      পঞ্চবার্ষিক পরিকল্পনা
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      বার্ষিক পরিকল্পনা
-                    </a>
-                  </li>
-                </ul>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-white" href="#" aria-current="page">
@@ -303,6 +283,15 @@ const Navbar = () => {
                   aria-current="page"
                 >
                   যোগাযোগ
+                </Link>
+              </li>
+              <li className="nav-item special-link">
+                <Link
+                  className="nav-link text-white"
+                  to="/bonogobondhu-corner"
+                  aria-current="page"
+                >
+                  বঙ্গবন্ধু কর্ণার
                 </Link>
               </li>
             </ul>

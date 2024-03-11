@@ -40,11 +40,11 @@ const TopHeader = () => {
   }, []);
   return (
     <div className="container">
-      <div className="bg-primary d-flex justify-content-between px-4 py-3">
+      <div className="bg-primary d-flex justify-content-between px-4 py-3 top-header-wrapper">
         <div className="date-time">
           <p className="text-white">{currentDateTime}</p>
         </div>
-        <div className="d-flex align-items-center">
+        <div className="d-flex align-items-center top-header-contact">
           <p className="me-4">
             <i className="fa fa-envelope me-2"></i> admin@gmail.com
           </p>
@@ -52,7 +52,7 @@ const TopHeader = () => {
             <i className="fa fa-phone me-2"></i> +88 01911 22 33 44
           </p>
         </div>
-        <div className="d-flex align-items-center">
+        <div className="d-flex sm_flex-column_items_center">
           <a className="me-4 text-white" href="#">
             <i className="fa fa-language me-1"></i> English
           </a>

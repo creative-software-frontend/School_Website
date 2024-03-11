@@ -12,10 +12,10 @@ const HomePage = () => {
         <NewsUpdate />
       </div>
       <div className="row gap-1">
-        <div className="col-lg-8 card ms-4">
+        <div className="col-lg-8 card ms-4 home-main-wrapper">
           <HomeMain />
         </div>
-        <div className="col-lg-3 card sidebar-col-lg-3">
+        <div className="col-lg-3 card sidebar-col-lg-3 col-12">
           <Sidebar />
         </div>
       </div>
