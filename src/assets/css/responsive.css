@@ -53,6 +53,73 @@
     height: 135px !important;
   }
 
+  /* Class Routine */
+
+  .timetable-data {
+    flex-wrap: nowrap;
+  }
+  .routine-card {
+    max-width: 100% !important;
+  }
+  .timetable {
+    border: none !important;
+  }
+  .sm-show {
+    display: flex !important;
+  }
+  .sm-gap-21 {
+    gap: 21rem !important;
+  }
+
+  /* exam routine */
+
+  .exam-routine .page-card {
+    flex-direction: column !important;
+  }
+  .sm-mt-05 {
+    margin-top: 5px !important;
+  }
+
+  /* result page */
+  .result-filter-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  /* online result */
+
+  .std-details-col:nth-child(3) {
+    order: 1; /* Set the order of the second flex item to 1 */
+    margin-bottom: 20px;
+  }
+  .std-details-col:nth-child(1) {
+    order: 2; /* Set the order of the second flex item to 1 */
+    margin-left: 0px !important;
+  }
+  .std-details-col:nth-child(2) {
+    order: 3; /* Set the order of the second flex item to 1 */
+  }
+
+  .student-photo img {
+    width: 100%;
+    height: 300px;
+    padding: 3px;
+  }
+
+  /* Students */
+  .students .page-card {
+    flex-direction: column !important;
+  }
+  .class-routine .page-card {
+    flex-direction: column !important;
+  }
+
+  /* contact page */
+
+  .dbox {
+    margin-bottom: 20px;
+  }
+
   /* Footer */
   .footer-main {
     flex-direction: column-reverse;
@@ -63,5 +130,29 @@
   .footer-bottom {
     flex-direction: column !important;
     text-align: center;
+  }
+
+  /* extras */
+  .sm-mb-1 {
+    margin-bottom: 10px;
+  }
+  .sm-p-05 {
+    padding: 5px !important;
+  }
+  .sm-p-1 {
+    padding: 15px !important;
+  }
+  .sm-mx-width-100 {
+    max-width: 100% !important;
+  }
+  .sm-flex-column {
+    flex-direction: column !important;
+    gap: 0.5rem;
+  }
+  .sm-flex-row {
+    flex-direction: row !important;
+  }
+  iframe {
+    width: 100%;
   }
 }

@@ -71,7 +71,7 @@ const OnlineResultPage = () => {
   return (
     <div className="container">
       {/* page header */}
-      <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between">
+      <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between sm-flex-column">
         <ProfileCardHeading heading={"অনলাইন রেজাল্ট। Online Result"} />
         <div style={{ fontSize: "18px", fontWeight: "500" }}>
           {!result && resultNotFoundMessage && (
@@ -82,8 +82,8 @@ const OnlineResultPage = () => {
       {/* end page header */}
 
       {/* result search option with admission no & exam */}
-      <div className="card px-3 py-3 my-1 page-card flex-row align-items-end justify-content-start gap-3">
-        <div className="col-lg-4">
+      <div className="card result-filter-wrapper px-3 py-3 my-1 page-card flex-row align-items-end justify-content-start gap-3">
+        <div className="col-lg-4 col-12">
           <label className="form-label" htmlFor="exam">
             Exam:
           </label>
@@ -103,7 +103,7 @@ const OnlineResultPage = () => {
               ))}
           </select>
         </div>
-        <div className="col-lg-3">
+        <div className="col-lg-3 col-12">
           <label className="form-label" htmlFor="admissionNo">
             Enter Admission No:
           </label>
@@ -144,7 +144,7 @@ const OnlineResultPage = () => {
 
             {/* student details */}
             <div className="student-details row my-5">
-              <div className="col-lg-4 ms-3">
+              <div className="col-lg-4 ms-3 std-details-col">
                 <p>
                   <span className="font-weight-b">Name: </span>
                   {result[0].entries.personal &&
@@ -168,7 +168,7 @@ const OnlineResultPage = () => {
                     result[0].entries.guardian.mother_name}
                 </p>
               </div>
-              <div className="col-lg-4">
+              <div className="col-lg-4 std-details-col">
                 <p>
                   <span className="font-weight-b">Class: </span>
                   {result[0].entries.academic &&
@@ -192,7 +192,7 @@ const OnlineResultPage = () => {
                     result[0].entries.academic.section.section}
                 </p>
               </div>
-              <div className="col-lg-3 student-photo d-flex justify-content-end">
+              <div className="col-lg-3 std-details-col student-photo d-flex justify-content-end">
                 <img
                   src={
                     result[0].entries.document &&
@@ -233,32 +233,35 @@ const OnlineResultPage = () => {
             {/* end result specific data */}
 
             {/* result final data */}
-            <table class="table table-bordered border-dark text-center my-5 mt-2">
-              <thead>
-                <tr>
-                  <th scope="col">Full Marks</th>
-                  <th scope="col">Total Obtained Marks</th>
-                  <th scope="col">Failed Subjects</th>
-                  <th scope="col">Final Grade</th>
-                  <th scope="col">Final GPA</th>
-                  <th scope="col">Percentage</th>
-                  <th scope="col">Comment</th>
-                  <th scope="col">Class Position</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>{result[0].total_marks}</td>
-                  <td>{result[0].total_marks_obtained}</td>
-                  <td>{totalFailedSubjects}</td>
-                  <td>{finalGrade}</td>
-                  <td>{finalPoint}</td>
-                  <td>{percentage}</td>
-                  <td>{finalComment}</td>
-                  <td>{position}</td>
-                </tr>
-              </tbody>
-            </table>
+            <div className="table-responsive">
+              <table class="table table-bordered border-dark text-center my-5 mt-2">
+                <thead>
+                  <tr>
+                    <th scope="col">Full Marks</th>
+                    <th scope="col">Total Obtained Marks</th>
+                    <th scope="col">Failed Subjects</th>
+                    <th scope="col">Final Grade</th>
+                    <th scope="col">Final GPA</th>
+                    <th scope="col">Percentage</th>
+                    <th scope="col">Comment</th>
+                    <th scope="col">Class Position</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{result[0].total_marks}</td>
+                    <td>{result[0].total_marks_obtained}</td>
+                    <td>{totalFailedSubjects}</td>
+                    <td>{finalGrade}</td>
+                    <td>{finalPoint}</td>
+                    <td>{percentage}</td>
+                    <td>{finalComment}</td>
+                    <td>{position}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             {/* end result final data */}
           </div>
           //   ============= End result section  ==============

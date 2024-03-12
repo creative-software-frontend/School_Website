@@ -1,3 +1,11 @@
+/* flex -> gap */
+
+.gap-16 {
+  gap: 16rem;
+}
+
+/* end flex -> gap */
+
 /* borders */
 
 .border-green {

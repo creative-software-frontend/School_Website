@@ -16,8 +16,8 @@ const TeachersPage = () => {
   return (
     <div className="container">
       <PageCard title="সকল শিক্ষক" />
-      <div className="card">
-        <table class="table table-bordered px-3 py-3 mb-0 text-center">
+      <div className="card  table-responsive-sm col-12">
+        <table className="table table-bordered px-3 py-3 mb-0 text-center">
           <thead>
             <tr>
               <th scope="col">#</th>

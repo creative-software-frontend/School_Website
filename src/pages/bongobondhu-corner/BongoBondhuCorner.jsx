@@ -8,10 +8,10 @@ const BongoBondhuCornerPage = () => {
       <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between">
         <ProfileCardHeading heading={"বঙ্গবন্ধু কর্ণার । Bongobondhu Corner"} />
       </div>
-      <div className="card p-4">
-        <div className="d-flex align-items-start">
+      <div className="card p-4 sm-p-1">
+        <div className="d-flex align-items-start sm-flex-column">
           <div
-            className="nav flex-column nav-pills me-3"
+            className="nav flex-column nav-pills me-3 sm-flex-row sm-mb-1"
             id="v-pills-tab"
             role="tablist"
             aria-orientation="vertical"

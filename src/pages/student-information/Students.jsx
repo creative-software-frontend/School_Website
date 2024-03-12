@@ -179,7 +179,7 @@ const StudentsPage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container students">
       <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between">
         <h4 className="fw-bold">সকল শিক্ষার্থী</h4>
         <div className="d-flex gap-2">

@@ -3,10 +3,7 @@ import { useCommonContext } from "@/context/CommonContext";
 import React from "react";
 
 const PlanningPage = () => {
-
-  const {downloadPdf} = useCommonContext();
-
- 
+  const { downloadPdf } = useCommonContext();
 
   return (
     <div className="container">
@@ -36,7 +33,7 @@ const PlanningPage = () => {
                   className="btn btn-primary"
                   onClick={() => downloadPdf("five-year-planning")}
                 >
-                  <i className="text-white fa fa-download me-2"></i>Download Now
+                  <i className="text-white fa fa-download me-2"></i>Download
                 </button>
               </td>
             </tr>
@@ -51,7 +48,7 @@ const PlanningPage = () => {
                   className="btn btn-primary"
                   onClick={() => downloadPdf("one-year-planning")}
                 >
-                  <i className="text-white fa fa-download me-2"></i>Download Now
+                  <i className="text-white fa fa-download me-2"></i>Download
                 </button>
               </td>
             </tr>

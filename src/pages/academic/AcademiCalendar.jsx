@@ -9,7 +9,7 @@ const AcademicCalendarPage = () => {
           </span>
         </a>
       </div>
-      <div className="card my-1">
+      <div className="card my-1 table-responsive">
         <table class="table table-bordered text-center">
           <thead>
             <tr>

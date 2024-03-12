@@ -1,6 +1,28 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  useEffect(() => {
+    const handleLinkClick = () => {
+      const navbarNavDropdown = document.getElementById("navbarNavDropdown");
+      navbarNavDropdown.classList.toggle("show");
+    };
+
+    const navLinks = document.querySelectorAll(".nav-link, .dropdown-item");
+
+    navLinks.forEach((link) => {
+      if (!link.classList.contains("dropdown-toggle"))
+        link.addEventListener("click", handleLinkClick);
+    });
+
+    return () => {
+      // Cleanup: Remove event listeners when the component unmounts
+      navLinks.forEach((link) => {
+        link.removeEventListener("click", handleLinkClick);
+      });
+    };
+  }, []);
+
   return (
     <div className="container mt-1">
       <nav className="navbar navbar-expand-lg navbar-light bg-primary text-white">

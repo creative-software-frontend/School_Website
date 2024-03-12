@@ -4,13 +4,17 @@ const ImportantFigureCard = ({ name, designation, image }) => {
   return (
     <>
       <ProfileCardHeading heading={designation} />
-      <div class="card figure mb-2 mt-2">
-        <img src={"/images/figures/" + image} class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title text-center">{name}</h5>
-          <p class="card-text text-center">{designation}</p>
+      <div className="card figure mb-2 mt-2">
+        <img
+          src={"/images/figures/" + image}
+          className="card-img-top"
+          alt="..."
+        />
+        <div className="card-body">
+          <h5 className="card-title text-center">{name}</h5>
+          <p className="card-text text-center">{designation}</p>
           <div className="text-center mt-1">
-            <a href="#" class="text-success fw-bold">
+            <a href="#" className="text-success fw-bold">
               Details
             </a>
           </div>

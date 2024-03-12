@@ -7,9 +7,9 @@ const NoticeBoard = () => {
       <ProfileCardHeading heading={"নোটিশ বোর্ড । Notice Board"} />
 
       <nav className="mx-1 mt-2">
-        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <div className="nav nav-tabs" id="nav-tab" role="tablist">
           <button
-            class="nav-link active"
+            className="nav-link active"
             id="nav-home-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-home"
@@ -21,7 +21,7 @@ const NoticeBoard = () => {
             নোটিশ
           </button>
           <button
-            class="nav-link"
+            className="nav-link"
             id="nav-profile-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-profile"
@@ -33,7 +33,7 @@ const NoticeBoard = () => {
             নিউজ
           </button>
           <button
-            class="nav-link"
+            className="nav-link"
             id="nav-contact-tab"
             data-bs-toggle="tab"
             data-bs-target="#nav-contact"
@@ -46,9 +46,9 @@ const NoticeBoard = () => {
           </button>
         </div>
       </nav>
-      <div class="tab-content mx-1 mb-3" id="nav-tabContent">
+      <div className="tab-content mx-1 mb-3" id="nav-tabContent">
         <div
-          class="tab-pane fade show active"
+          className="tab-pane fade show active"
           id="nav-home"
           role="tabpanel"
           aria-labelledby="nav-home-tab"
@@ -92,7 +92,7 @@ const NoticeBoard = () => {
         </div>
 
         <div
-          class="tab-pane fade"
+          className="tab-pane fade"
           id="nav-profile"
           role="tabpanel"
           aria-labelledby="nav-profile-tab"
@@ -155,7 +155,7 @@ const NoticeBoard = () => {
           </div>
         </div>
         <div
-          class="tab-pane fade"
+          className="tab-pane fade"
           id="nav-contact"
           role="tabpanel"
           aria-labelledby="nav-contact-tab"

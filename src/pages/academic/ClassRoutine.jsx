@@ -5,7 +5,13 @@ import { useCommonContext } from "@/context/CommonContext";
 import { useFrontendContext } from "@/context/FrontendContext";
 import { useState } from "react";
 
-import { FaUserTie, FaBuilding, FaBook, FaClock } from "react-icons/fa";
+import {
+  FaUserTie,
+  FaBuilding,
+  FaBook,
+  FaClock,
+  FaArrowRight,
+} from "react-icons/fa";
 
 const ClassRoutinePage = () => {
   // sections state
@@ -77,12 +83,12 @@ const ClassRoutinePage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container class-routine">
       <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between">
         <ProfileCardHeading heading={"ক্লাস রুটিন । Class Routine"} />
       </div>
       <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between gap-3">
-        <div className="col-lg-4">
+        <div className="col-lg-4 col-12">
           <select
             className="form-control class-list form-select"
             style={{ width: "100%" }}
@@ -97,7 +103,7 @@ const ClassRoutinePage = () => {
               ))}
           </select>
         </div>
-        <div className="col-lg-4">
+        <div className="col-lg-4 col-12">
           <select
             className="form-control class-list form-select"
             style={{ width: "100%" }}
@@ -128,73 +134,80 @@ const ClassRoutinePage = () => {
       </div>
 
       {timeTable && timeTable.length > 0 ? (
-        <div className="timetable card p-3">
-          <div className="week-days d-flex gap-5 justify-content-between mb-3">
-            {weekDays.length &&
-              weekDays.map((day) => (
-                <p className="class_timetable_col" key={day.id}>
-                  {day.name}
-                </p>
-              ))}
-          </div>
-          <div className="timetable-data row">
-            {loaderTimeTable ? (
-              <Spinner />
-            ) : (
-              weekDays.map((day) => (
-                <div
-                  key={day.id}
-                  className="col-md-2"
-                  style={{ maxWidth: "14%" }}
-                >
-                  {timeTable.some(
-                    (timeSlot) => timeSlot.weekday_id == day.id
-                  ) ? (
-                    timeTable.map((timeSlot) => {
-                      if (timeSlot.weekday_id == day.id) {
-                        return (
-                          <div
-                            key={timeSlot.id}
-                            className="timetable-row card mb-2 p-2"
-                          >
-                            <span
-                              style={{ fontSize: "12px", fontWeight: "500" }}
-                              className="d-flex align-items-center"
+        <div className="table-responsive card">
+          <div className="timetable card p-3">
+            <div className="d-flex justify-content-end align-items-center d-none sm-show">
+              <p className="text-success">
+                Next <FaArrowRight />
+              </p>
+            </div>
+            <div className="week-days d-flex gap-5 sm-gap-21 justify-content-between mb-3">
+              {weekDays.length &&
+                weekDays.map((day) => (
+                  <p className="class_timetable_col" key={day.id}>
+                    {day.name}
+                  </p>
+                ))}
+            </div>
+            <div className="timetable-data row">
+              {loaderTimeTable ? (
+                <Spinner />
+              ) : (
+                weekDays.map((day) => (
+                  <div
+                    key={day.id}
+                    className="col-md-2 routine-card"
+                    style={{ maxWidth: "14%" }}
+                  >
+                    {timeTable.some(
+                      (timeSlot) => timeSlot.weekday_id == day.id
+                    ) ? (
+                      timeTable.map((timeSlot) => {
+                        if (timeSlot.weekday_id == day.id) {
+                          return (
+                            <div
+                              key={timeSlot.id}
+                              className="timetable-row card mb-2 p-2"
                             >
-                              <FaClock className="me-1" /> {timeSlot.time_from}{" "}
-                              - {timeSlot.time_to}
-                            </span>
-                            <div className="timetable-cell">
-                              <div className="d-flex align-items-center gap-1">
-                                <FaBook /> {timeSlot.subject.subject}
-                              </div>
-                              <div className="d-flex align-items-center gap-1">
-                                <FaUserTie /> {timeSlot.teacher.name}
-                              </div>
-                              <div className="d-flex align-items-center gap-1">
-                                <FaBuilding /> {timeSlot.room_no}
+                              <span
+                                style={{ fontSize: "12px", fontWeight: "500" }}
+                                className="d-flex align-items-center"
+                              >
+                                <FaClock className="me-1" />{" "}
+                                {timeSlot.time_from} - {timeSlot.time_to}
+                              </span>
+                              <div className="timetable-cell">
+                                <div className="d-flex align-items-center gap-1">
+                                  <FaBook /> {timeSlot.subject.subject}
+                                </div>
+                                <div className="d-flex align-items-center gap-1">
+                                  <FaUserTie /> {timeSlot.teacher.name}
+                                </div>
+                                <div className="d-flex align-items-center gap-1">
+                                  <FaBuilding /> {timeSlot.room_no}
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        );
-                      }
-                      return null;
-                    })
-                  ) : (
-                    <div
-                      style={{ width: "100%" }}
-                      className={`text-danger ${
-                        day.id === 3 || day.id === 4
-                          ? "ms-3 ps-1"
-                          : " ms-3 ps-4"
-                      } `}
-                    >
-                      Not Sheduled
-                    </div>
-                  )}
-                </div>
-              ))
-            )}
+                          );
+                        }
+                        return null;
+                      })
+                    ) : (
+                      <div
+                        style={{ width: "100%" }}
+                        className={`text-danger ${
+                          day.id === 3 || day.id === 4
+                            ? "ms-3 ps-1"
+                            : " ms-3 ps-4"
+                        } `}
+                      >
+                        Not Sheduled
+                      </div>
+                    )}
+                  </div>
+                ))
+              )}
+            </div>
           </div>
         </div>
       ) : (

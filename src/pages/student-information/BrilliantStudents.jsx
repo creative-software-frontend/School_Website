@@ -4,7 +4,7 @@ const BrilliantStudentsPage = () => {
       <div className="card px-3 py-3 my-1 page-card">
         <h4 className="fw-bold">কৃতি শিক্ষার্থী</h4>
       </div>
-      <div className="card">
+      <div className="card table-responsive">
         <table className="table table-bordered px-3 py-3 mb-0 text-center">
           <thead>
             <tr>

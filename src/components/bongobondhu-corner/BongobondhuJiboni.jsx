@@ -1,7 +1,7 @@
 const BongobondhuJiboni = () => {
   return (
     <>
-      <div className="card flex-row p-3 mb-3">
+      <div className="card flex-row p-3 mb-3 sm-flex-column sm-p-05">
         <div className="col-lg-6 box-shadow-hard">
           <img
             src="/images/bongobondu-corner/1.jpg"

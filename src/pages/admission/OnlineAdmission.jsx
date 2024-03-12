@@ -62,8 +62,6 @@ const OnlineAdmissionPage = () => {
   const [previousSchoolName, setPreviousSchoolName] = useState("");
   const [previousSchoolAddress, setPreviousSchoolAddress] = useState("");
 
-  console.log(successMessage);
-
   // get today date from store for selecting default today date in admission date
   // get capitalize firstLetter from store
   // get file Error & Handle File Change From Store
@@ -563,7 +561,10 @@ const OnlineAdmissionPage = () => {
                 onChange={(e) => setMeasurementData(e.target.value)}
               />
             </div>
-            <div className="form-group col-md-5" style={{ maxWidth: "37%" }}>
+            <div
+              className="form-group col-md-5 sm-mx-width-100"
+              style={{ maxWidth: "37%" }}
+            >
               <label className="form-label ">
                 Student Photo{" "}
                 <span style={{ fontSize: "14px", fontWeight: "normal" }}>

@@ -53,80 +53,80 @@ const PhotoGallery = () => {
     <div className="mt-3">
       <ProfileCardHeading heading={"ফটো গ্যালারি"} />
       <div className="my-3">
-        <div class="photo-container">
-          <div class="mySlides">
-            <div class="numbertext">
+        <div className="photo-container">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">1 </span>/ 12
             </div>
             <img src="/images/photos/1.jpg" style={{ width: "100%" }} />
           </div>
 
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">2 </span>/ 12
             </div>
             <img src="/images/photos/2.jpg" style={{ width: "100%" }} />
           </div>
 
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">3 </span>/ 12
             </div>
             <img src="/images/photos/3.jpg" style={{ width: "100%" }} />
           </div>
 
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">4 </span>/ 12
             </div>
             <img src="/images/photos/4.jpg" style={{ width: "100%" }} />
           </div>
 
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">5 </span>/ 12
             </div>
             <img src="/images/photos/5.jpg" style={{ width: "100%" }} />
           </div>
 
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">6 </span>/ 12
             </div>
             <img src="/images/photos/6.jpg" style={{ width: "100%" }} />
           </div>
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">7 </span>/ 12
             </div>
             <img src="/images/photos/7.jpg" style={{ width: "100%" }} />
           </div>
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">8 </span>/ 12
             </div>
             <img src="/images/photos/Picnic1.jpg" style={{ width: "100%" }} />
           </div>
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">9 </span>/ 12
             </div>
             <img src="/images/photos/1.jpg" style={{ width: "100%" }} />
           </div>
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">10 </span> / 12
             </div>
             <img src="/images/photos/2.jpg" style={{ width: "100%" }} />
           </div>
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">11 </span> / 12
             </div>
             <img src="/images/photos/3.jpg" style={{ width: "100%" }} />
           </div>
-          <div class="mySlides">
-            <div class="numbertext">
+          <div className="mySlides">
+            <div className="numbertext">
               <span className="fw-bold">12 </span> / 12
             </div>
             <img src="/images/photos/4.jpg" style={{ width: "100%" }} />
@@ -139,113 +139,113 @@ const PhotoGallery = () => {
             &#10095;
           </a>
 
-          <div class="caption-container">
+          <div className="caption-container">
             <p id="caption"></p>
           </div>
 
-          <div class="row">
-            <div class="column">
+          <div className="row">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/1.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(1)}
                 alt="The Woods"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/2.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(2)}
                 alt="Cinque Terre"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/3.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(3)}
                 alt="Mountains and fjords"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/4.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(4)}
                 alt="Northern Lights"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/5.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(5)}
                 alt="Nature and sunrise"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/6.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(6)}
                 alt="Snowy Mountains"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/7.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(7)}
                 alt="Snowy Mountains"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/Picnic1.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(8)}
                 alt="Snowy Mountains"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/1.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(9)}
                 alt="The Woods"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/2.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(10)}
                 alt="Cinque Terre"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/3.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(11)}
                 alt="Mountains and fjords"
               />
             </div>
-            <div class="column">
+            <div className="column">
               <img
-                class="demo cursor"
+                className="demo cursor"
                 src="/images/photos/4.jpg"
                 style={{ width: "100%" }}
                 onClick={() => currentSlide(12)}

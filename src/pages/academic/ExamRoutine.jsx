@@ -86,10 +86,13 @@ const ExamRoutinePage = () => {
   // format date function
 
   return (
-    <div className="container">
+    <div className="container exam-routine">
       <div className="card px-3 py-3 my-1 page-card flex-row align-items-center justify-content-between">
         <ProfileCardHeading heading={"পরীক্ষার রুটিন । Class Routine"} />
-        <div style={{ fontSize: "18px", fontWeight: "500" }}>
+        <div
+          className="sm-mt-05"
+          style={{ fontSize: "18px", fontWeight: "500" }}
+        >
           {timeTable.length > 0
             ? timeTable[0].exam.exam_name +
               " | " +
@@ -167,7 +170,7 @@ const ExamRoutinePage = () => {
 
       {!loaderTimeTable ? (
         timeTable.length > 0 && (
-          <div className="exam-timetable card p-2">
+          <div className="exam-timetable table-responsive card p-2">
             <table className="table table-bordered">
               <thead>
                 <tr>
