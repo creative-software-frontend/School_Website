@@ -307,7 +307,7 @@ const Navbar = () => {
                   যোগাযোগ
                 </Link>
               </li>
-              <li className="nav-item special-link">
+             {/*  <li className="nav-item special-link">
                 <Link
                   className="nav-link text-white"
                   to="/bonogobondhu-corner"
@@ -315,7 +315,7 @@ const Navbar = () => {
                 >
                   বঙ্গবন্ধু কর্ণার
                 </Link>
-              </li>
+              </li>  */}
             </ul>
           </div>
         </div>
