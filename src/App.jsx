@@ -4,8 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import InstituteHistory from "./pages/institue-information/InstituteHistory";
 import InstituteVisionMission from "./pages/institue-information/InstituteVisionMission";
-import ComputerLabPage from "./pages/institue-information/computerLab";
-import LibraryPage from "./pages/institue-information/library";
+import LibraryPage from "./pages/intitue-information/library";
 import CulturalHistoryPage from "./pages/institue-information/culturalHistory";
 import TeachersPage from "./pages/teacher-information/Teachers";
 import DirectorsPage from "./pages/teacher-information/Director";
@@ -25,6 +24,8 @@ import PhotoGalleryPage from "./pages/gallery/PhotoGalleryPage";
 import VideoGalleryPage from "./pages/gallery/VideoGallery";
 import PlanningPage from "./pages/planning/PlanningPage";
 import BongoBondhuCornerPage from "./pages/bongobondhu-corner/BongoBondhuCorner";
+import ComputerLabPage from "./pages/institue-information/ComputerLab";
+
 
 function App() {
   const { loader } = useFrontendContext();
