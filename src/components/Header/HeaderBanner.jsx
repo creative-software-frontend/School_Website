@@ -3,8 +3,8 @@ const HeaderBanner = () => {
     <div className="container mt-1 header_banner">
       <img
         src="/images/school-banner.png"
-        alt=""
-        style={{ width: "1298px", objectFit: "cover" }}
+        alt="School Banner"
+        style={{ width: "100%", height: "auto", objectFit: "cover" }}
       />
     </div>
   );
