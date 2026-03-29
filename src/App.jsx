@@ -54,7 +54,7 @@ function App() {
              */}
             <Route path="/institute-history" element={<InstituteHistory />} />
             <Route
-              path="/institute-vission"
+              path="/institute-vision"
               element={<InstituteVisionMission />}
             />
             <Route path="/computer-lab" element={<ComputerLabPage />} />
@@ -90,9 +90,7 @@ function App() {
             />
             <Route path="/class-routine" element={<ClassRoutinePage />} />
             <Route path="/exam-routine" element={<ExamRoutinePage />} />
-            {/* <Route path="/brilliant-students" element={<BrilliantStudentsPage />} />
-        <Route path="/lectures" element={<LecturesPage />} />
-        <Route path="/questions" element={<QuestionsPage />} /> */}
+
             {/*
              ******* admission information *******
              */}
@@ -112,7 +110,7 @@ function App() {
 
             {/* ******* bongo bondhu corner ******* */}
             <Route
-              path="/bonogobondhu-corner"
+              path="/bongobondhu-corner"
               element={<BongoBondhuCornerPage />}
             />
           </Routes>
