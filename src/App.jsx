@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import InstituteHistory from "./pages/institue-information/InstituteHistory";
 import InstituteVisionMission from "./pages/institue-information/InstituteVisionMission";
-import CulturalHistoryPage from "./pages/institue-information/culturalHistory";
+import CulturalHistoryPage from "./pages/institue-information/CulturalHistory";
 import TeachersPage from "./pages/teacher-information/Teachers";
 import DirectorsPage from "./pages/teacher-information/Director";
 import StudentsPage from "./pages/student-information/Students";
