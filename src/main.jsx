@@ -6,8 +6,7 @@ import "./assets/css/responsive.css";
 
 // bootstrap js
 
-import "./assets/js/popper.min.js";
-import "./assets/js/bootstrap.min.js";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // router config
 
